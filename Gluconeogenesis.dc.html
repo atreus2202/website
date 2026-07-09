@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<title>Gluconeogenesis — Ăn và sống đúng thiết kế sinh học | Luke Dang</title>
+<meta name="description" content="Dinh dưỡng dựa trên cơ chế sinh hóa thật, không phải dogma. Animal-based, mechanistic nutrition cho người tập gym muốn hiểu cơ thể mình vận hành thế nào.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&amp;family=Barlow+Condensed:wght@300;400;500;600&amp;display=swap&amp;subset=vietnamese,latin,latin-ext" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { margin: 0; background: #0A0908; color: #EDE7D8; -webkit-font-smoothing: antialiased; }
+  a { color: #C08A3E; text-decoration: none; }
+  a:hover { color: #B4301E; }
+  ::selection { background: #B4301E; color: #EDE7D8; }
+</style>
+</helmet>
+<div style="position: relative; overflow-x: hidden; background: #0A0908;">
+
+  
+
+  <!-- ============ HERO ============ -->
+  <section data-screen-label="HERO" style="position: relative; min-height: 100vh; display: flex; flex-direction: column; overflow: hidden;">
+    <video autoplay="" muted="" loop="" playsinline="" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: 0;">
+      <source src="assets/hero.mp4" type="video/mp4">
+    </video>
+    <div style="position: absolute; inset: 0; z-index: 1; background: linear-gradient(to top, #0A0908 2%, rgba(10,9,8,0.35) 40%, rgba(10,9,8,0.35) 60%, rgba(10,9,8,0.7) 100%);"></div>
+    <div style="position: absolute; inset: 0; z-index: 1; background: linear-gradient(to right, rgba(10,9,8,0.75) 0%, rgba(10,9,8,0.1) 55%, rgba(10,9,8,0) 100%);"></div>
+
+    <!-- top bar -->
+    <div style="position: relative; z-index: 3; display: flex; align-items: center; justify-content: space-between; gap: 20px; padding: 26px 44px;">
+      <div style="font-family: 'Oswald', sans-serif; font-weight: 700; letter-spacing: 0.32em; text-transform: uppercase; font-size: 0.92rem; color: #EDE7D8;">Gluconeogenesis</div>
+      <a href="https://www.tiktok.com/@_gluconeogenesis_" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; gap: 10px; font-family: 'Oswald', sans-serif; font-weight: 600; font-size: 0.78rem; letter-spacing: 0.18em; text-transform: uppercase; color: #C08A3E; border: 1px solid #3a352f; padding: 10px 16px;">
+        <span style="width: 7px; height: 7px; background: #B4301E; display: inline-block;"></span>@gluconeogenesis · TikTok
+      </a>
+    </div>
+
+    <!-- hero body -->
+    <div style="position: relative; z-index: 3; margin-top: auto; width: 100%; max-width: 1240px; margin-left: auto; margin-right: auto; padding: 0 44px 72px;">
+      <div style="font-family: 'Oswald', sans-serif; font-weight: 600; font-size: 0.85rem; letter-spacing: 0.3em; text-transform: uppercase; color: #B4301E; margin-bottom: 26px;">Dinh dưỡng theo cơ chế · Không theo dogma</div>
+      <h1 style="font-family: 'Oswald', sans-serif; font-weight: 700; text-transform: uppercase; font-size: clamp(3rem, 8.5vw, 8rem); line-height: 1.2; letter-spacing: -0.01em; margin: 0 0 30px; color: #EDE7D8; max-width: 15ch; text-shadow: 0 2px 40px rgba(0,0,0,0.6)">Ăn và sống như một con người</h1>
+      <p style="font-family: 'Barlow Condensed', sans-serif; font-weight: 400; font-size: clamp(1.15rem, 1.9vw, 1.6rem); line-height: 1.45; color: #D6CFBF; max-width: 46ch; margin: 0 0 40px;">Con người là thợ săn đỉnh chuỗi thức ăn, không phải thỏ. Dinh dưỡng ở đây dựa trên cơ chế sinh hóa thật, không phải dogma.</p>
+      <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 18px;">
+        <a href="#mechanism" style="display: inline-flex; align-items: center; gap: 12px; background: #B4301E; color: #EDE7D8; font-family: 'Oswald', sans-serif; font-weight: 600; font-size: 1rem; letter-spacing: 0.12em; text-transform: uppercase; padding: 19px 40px; border: 1px solid #B4301E;" style-hover="background: #d13a25; border-color: #d13a25;">Xem cơ chế <span style="font-size: 1.2rem; line-height: 1;">↓</span></a>
+        <a href="https://www.tiktok.com/@_gluconeogenesis_" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; gap: 10px; background: transparent; color: #EDE7D8; font-family: 'Oswald', sans-serif; font-weight: 600; font-size: 1rem; letter-spacing: 0.12em; text-transform: uppercase; padding: 19px 34px; border: 1px solid #55504a;" style-hover="border-color: #B4301E; color: #C08A3E;">@gluconeogenesis trên TikTok</a>
+      </div>
+      <sc-if value="{{ showSocialProof }}" hint-placeholder-val="{{ true }}">
+        
+      </sc-if>
+    </div>
+  </section>
+
+  <!-- ============ SECTION 1 — VẤN ĐỀ ============ -->
+  <section data-screen-label="VẤN ĐỀ" style="position: relative; padding: 120px 44px; border-top: 1px solid #1c1a17;">
+    <div style="max-width: 1120px; margin: 0 auto;">
+      <div style="display: flex; align-items: baseline; gap: 18px; font-family: 'Oswald', sans-serif; font-weight: 600; letter-spacing: 0.28em; text-transform: uppercase; font-size: 0.85rem; margin-bottom: 40px;">
+        <span style="color: #B4301E;">01</span><span style="width: 44px; height: 1px; background: #3a352f; display: inline-block; transform: translateY(-4px);"></span><span style="color: #8C8A83;">Vấn đề</span>
+      </div>
+      
+
+      <h2 style="font-family: 'Oswald', sans-serif; font-weight: 700; text-transform: uppercase; font-size: clamp(2.1rem, 5vw, 4.7rem); line-height: 1.2; letter-spacing: -0.005em; margin: 0 0 56px; max-width: 20ch; color: #EDE7D8">Bọn làm dinh dưỡng đang bán dogma, không bán cơ chế</h2><div style="display: flex; flex-wrap: wrap; gap: 14px; margin-bottom: 48px;">
+        <span style="font-family: 'Oswald', sans-serif; font-weight: 500; font-size: 0.95rem; letter-spacing: 0.14em; text-transform: uppercase; color: #6f6b64; border: 1px solid #2c2925; padding: 12px 20px; text-decoration: line-through; text-decoration-color: #B4301E; text-decoration-thickness: 2px;">Low-fat</span>
+        <span style="font-family: 'Oswald', sans-serif; font-weight: 500; font-size: 0.95rem; letter-spacing: 0.14em; text-transform: uppercase; color: #6f6b64; border: 1px solid #2c2925; padding: 12px 20px; text-decoration: line-through; text-decoration-color: #B4301E; text-decoration-thickness: 2px;">Plant-based</span>
+        <span style="font-family: 'Oswald', sans-serif; font-weight: 500; font-size: 0.95rem; letter-spacing: 0.14em; text-transform: uppercase; color: #6f6b64; border: 1px solid #2c2925; padding: 12px 20px; text-decoration: line-through; text-decoration-color: #B4301E; text-decoration-thickness: 2px;">Calorie-in-calorie-out</span>
+      </div>
+
+      <div style="display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 44px; max-width: 940px;">
+        <p style="font-family: 'Barlow Condensed', sans-serif; font-weight: 400; font-size: 1.32rem; line-height: 1.55; color: #BFB9AC; margin: 0;">Ba mô hình này y hệt nhau ở một điểm: chúng bỏ qua cơ chế thật. <strong style="color: #C08A3E; font-weight: 600;">Randle cycle</strong>. <strong style="color: #C08A3E; font-weight: 600;">Adaptive thermogenesis</strong>. Chất lượng <strong style="color: #C08A3E; font-weight: 600;">amino acid</strong>, không chỉ số lượng gram protein.</p>
+        <p style="font-family: 'Barlow Condensed', sans-serif; font-weight: 400; font-size: 1.32rem; line-height: 1.55; color: #BFB9AC; margin: 0;">Phần lớn "bằng chứng khoa học" đứng sau các mô hình này là epidemiology quan sát: confounded, không kiểm soát được biến nhiễu, không chứng minh nhân quả. Nó đủ để bán một dogma. <strong style="color: #EDE7D8; font-weight: 500;">Không đủ để giải thích cơ thể mày vận hành thế nào.</strong></p>
+      </div>
+    </div>
+  <div style="position: fixed; inset: 0; z-index: 60; pointer-events: none; opacity: 0.05; mix-blend-mode: overlay; background-image: url(&quot;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E&quot;); left: 130px; top: 187px"></div></section>
+
+  <!-- ============ SECTION 2 — CƠ CHẾ (full-bleed) ============ -->
+  <section id="mechanism" data-screen-label="CƠ CHẾ" style="position: relative; width: 100%; aspect-ratio: 426 / 282; min-height: 88vh; overflow: hidden; background: #0A0908;">
+    <img src="assets/lion.png" alt="Sư tử cái ghìm con mồi ngựa vằn" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center 22%; display: block;">
+
+    <!-- blend the photo edges into the dark background -->
+    <div style="position: absolute; inset: 0; pointer-events: none; box-shadow: inset 0 0 220px 100px #0A0908;"></div>
+    <div style="position: absolute; inset: 0; pointer-events: none; background: radial-gradient(125% 118% at 50% 46%, rgba(10,9,8,0) 42%, rgba(10,9,8,0.92) 100%);"></div>
+    <div style="position: absolute; inset: 0; pointer-events: none; background: linear-gradient(to bottom, rgba(10,9,8,0.92) 0%, rgba(10,9,8,0.15) 20%, rgba(10,9,8,0) 40%, rgba(10,9,8,0.55) 66%, #0A0908 100%);"></div>
+    <div style="position: absolute; inset: 0; pointer-events: none; background: linear-gradient(to right, rgba(10,9,8,0.85) 0%, rgba(10,9,8,0) 32%, rgba(10,9,8,0) 70%, rgba(10,9,8,0.7) 100%);"></div>
+
+
+    <!-- overlaid text -->
+    <div style="position: absolute; inset: 0; display: flex; flex-direction: column; justify-content: space-between; max-width: 1240px; margin: 0 auto; padding: 8vh 44px 7vh;">
+      <div>
+        <div style="display: flex; align-items: baseline; gap: 18px; font-family: 'Oswald', sans-serif; font-weight: 600; letter-spacing: 0.28em; text-transform: uppercase; font-size: 0.85rem; margin-bottom: 30px;">
+          <span style="color: #B4301E;">02</span><span style="width: 44px; height: 1px; background: #6b5f4f; display: inline-block; transform: translateY(-4px);"></span><span style="color: #C7C2B8;">Cơ chế</span>
+        </div>
+        <h2 style="font-family: 'Oswald', sans-serif; font-weight: 700; text-transform: uppercase; font-size: clamp(2.1rem, 5vw, 4.8rem); line-height: 1.2; letter-spacing: -0.005em; margin: 0; max-width: 20ch; color: #EDE7D8; text-shadow: 0 2px 34px rgba(0,0,0,0.8)">Đây là lý do animal-based thắng về mặt sinh hóa</h2>
+      </div>
+
+      <div style="display: flex; flex-direction: column; gap: 30px;">
+        <p style="font-family: 'Barlow Condensed', sans-serif; font-weight: 400; font-size: clamp(1.35rem, 2vw, 1.8rem); line-height: 1.4; color: #EDE7D8; margin: 0; max-width: 32ch; text-shadow: 0 2px 22px rgba(0,0,0,0.9);">Tổng hợp protein và cân bằng hormone không được quyết định bởi tổng gram protein nạp vào, <strong style="color: #E0A34D; font-weight: 600;">mà bởi cân bằng amino acid.</strong></p>
+        <div style="display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 46px; max-width: 940px;">
+          <p style="font-family: 'Barlow Condensed', sans-serif; font-weight: 400; font-size: 1.2rem; line-height: 1.5; color: #D4CEC2; margin: 0; text-shadow: 0 2px 20px rgba(0,0,0,0.95);">Thịt cơ đơn độc (muscle meat only) lệch tỷ lệ <strong style="color: #E0A34D; font-weight: 600;">methionine/glycine</strong>, gây stress chuyển hóa nếu không cân bằng lại bằng collagen, organ meat, hoặc bone broth. Đây là lý do "ăn nhiều ức gà" không phải chiến lược tối ưu. <strong style="color: #EDE7D8; font-weight: 500;">Nó là chiến lược thiếu hiểu biết.</strong></p>
+          <p style="font-family: 'Barlow Condensed', sans-serif; font-weight: 400; font-size: 1.2rem; line-height: 1.5; color: #D4CEC2; margin: 0; text-shadow: 0 2px 20px rgba(0,0,0,0.95);">Animal-based, ăn đúng cách (không phải chỉ muscle meat), cung cấp <strong style="color: #E0A34D; font-weight: 600;">complete amino acid profile</strong> với bioavailability cao hơn hẳn plant protein. Không cần combine, không cần tính toán phức tạp để né thiếu hụt.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SECTION 3 — SẢN PHẨM ============ -->
+  <section data-screen-label="SẢN PHẨM" style="position: relative; padding: 120px 44px; border-top: 1px solid #1c1a17;">
+    <div style="max-width: 1120px; margin: 0 auto;">
+      <div style="display: flex; align-items: baseline; gap: 18px; font-family: 'Oswald', sans-serif; font-weight: 600; letter-spacing: 0.28em; text-transform: uppercase; font-size: 0.85rem; margin-bottom: 40px;">
+        <span style="color: #B4301E;">03</span><span style="width: 44px; height: 1px; background: #3a352f; display: inline-block; transform: translateY(-4px);"></span><span style="color: #8C8A83;">Sản phẩm &amp; dịch vụ</span>
+      </div>
+      <h2 style="font-family: 'Oswald', sans-serif; font-weight: 700; text-transform: uppercase; font-size: clamp(2.1rem, 5vw, 4.6rem); line-height: 1.2; letter-spacing: -0.005em; margin: 0 0 60px; max-width: 18ch; color: #EDE7D8">Hai thứ cần nếu muốn làm đúng</h2>
+
+      <div style="display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 26px;">
+        <!-- Card 1 -->
+        <div style="display: flex; flex-direction: column; background: #121110; border: 1px solid #26231f; padding: 44px 40px;" style-hover="border-color: #B4301E;">
+          <div style="display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 28px;">
+            <span style="font-family: 'Oswald', sans-serif; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; font-size: 0.78rem; color: #8C8A83;">Bộ não · Obsidian Vault</span>
+            <span style="font-family: 'Oswald', sans-serif; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; font-size: 0.68rem; color: #C08A3E; border: 1px solid #4a3d24; padding: 6px 10px;">Early access</span>
+          </div>
+          <h3 style="font-family: 'Oswald', sans-serif; font-weight: 700; text-transform: uppercase; font-size: 1.9rem; line-height: 1; margin: 0 0 22px; color: #EDE7D8;">"Bộ não"</h3>
+          <p style="font-family: 'Barlow Condensed', sans-serif; font-weight: 400; font-size: 1.18rem; line-height: 1.5; color: #BFB9AC; margin: 0 0 18px;">File knowledge base mechanistic nutrition dùng hàng ngày. Để khi hỏi AI về dinh dưỡng, nhận câu trả lời đúng cơ chế thay vì rác wellness-blog.</p>
+          <p style="font-family: 'Barlow Condensed', sans-serif; font-weight: 400; font-size: 1.05rem; line-height: 1.5; color: #8C8A83; margin: 0 0 32px;">Đang trong giai đoạn hoàn thiện. Early access mở giới hạn số lượng, đăng ký để nhận file ngay khi ra mắt.</p>
+          <div style="margin-top: auto;">
+            <div style="display: flex; align-items: baseline; gap: 14px; margin-bottom: 24px;">
+              <span style="font-family: 'Oswald', sans-serif; font-weight: 700; font-size: 2.1rem; color: #EDE7D8;">135.000đ</span>
+              <span style="font-family: 'Barlow Condensed', sans-serif; font-weight: 400; font-size: 1.25rem; color: #6f6b64; text-decoration: line-through; text-decoration-color: #B4301E;">150.000đ</span>
+              <span style="font-family: 'Barlow Condensed', sans-serif; font-weight: 500; font-size: 0.9rem; letter-spacing: 0.1em; text-transform: uppercase; color: #C08A3E;">−10%</span>
+            </div>
+            <a href="{{ vaultUrl }}" style="display: block; text-align: center; background: transparent; color: #EDE7D8; font-family: 'Oswald', sans-serif; font-weight: 600; font-size: 0.95rem; letter-spacing: 0.12em; text-transform: uppercase; padding: 17px 24px; border: 1px solid #55504a;" style-hover="border-color: #B4301E; color: #C08A3E;">Đăng ký early access</a>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div style="display: flex; flex-direction: column; background: #121110; border: 1px solid #26231f; padding: 44px 40px;" style-hover="border-color: #B4301E;">
+          <div style="display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 28px;">
+            <span style="font-family: 'Oswald', sans-serif; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; font-size: 0.78rem; color: #8C8A83;">Coaching Plan</span>
+            <span style="font-family: 'Oswald', sans-serif; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; font-size: 0.68rem; color: #C08A3E; border: 1px solid #4a3d24; padding: 6px 10px;">Số lượng giới hạn</span>
+          </div>
+          <h3 style="font-family: 'Oswald', sans-serif; font-weight: 700; text-transform: uppercase; font-size: 1.9rem; line-height: 1; margin: 0 0 22px; color: #EDE7D8;">Coaching 1-1</h3>
+          <p style="font-family: 'Barlow Condensed', sans-serif; font-weight: 400; font-size: 1.18rem; line-height: 1.5; color: #BFB9AC; margin: 0 0 18px;">Plan cá nhân hóa kết hợp gym và dinh dưỡng: giảm cân, lean bulk, hay tối ưu hormone. Điều chỉnh theo tiến độ thật, không theo template có sẵn.</p>
+          <p style="font-family: 'Barlow Condensed', sans-serif; font-weight: 400; font-size: 1.05rem; line-height: 1.5; color: #8C8A83; margin: 0 0 32px;">Đang coach trực tiếp số lượng giới hạn để đảm bảo chất lượng theo dõi. Không nhận đại trà.</p>
+          <div style="margin-top: auto;">
+            <div style="display: flex; align-items: baseline; gap: 10px; margin-bottom: 24px;">
+              <span style="font-family: 'Oswald', sans-serif; font-weight: 700; font-size: 2.1rem; color: #EDE7D8;">600.000đ</span>
+              <span style="font-family: 'Barlow Condensed', sans-serif; font-weight: 400; font-size: 1.15rem; color: #8C8A83;">/ tháng</span>
+            </div>
+            <a href="{{ coachingUrl }}" style="display: block; text-align: center; background: #B4301E; color: #EDE7D8; font-family: 'Oswald', sans-serif; font-weight: 600; font-size: 0.95rem; letter-spacing: 0.12em; text-transform: uppercase; padding: 17px 24px; border: 1px solid #B4301E;" style-hover="background: #d13a25; border-color: #d13a25;">Xin 1 suất coaching</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CTA CUỐI ============ -->
+  <section data-screen-label="CTA CUỐI" style="position: relative; padding: 140px 44px 120px; background: #0c0b0a; border-top: 1px solid #1c1a17;">
+    <div style="max-width: 1120px; margin: 0 auto; text-align: center;">
+      <h2 style="font-family: 'Oswald', sans-serif; font-weight: 700; text-transform: uppercase; font-size: clamp(2.4rem, 6vw, 5.4rem); line-height: 1.2; letter-spacing: -0.01em; margin: 0 auto 34px; max-width: 16ch; color: #EDE7D8">Không có đường tắt về cơ chế</h2>
+      <p style="font-family: 'Barlow Condensed', sans-serif; font-weight: 400; font-size: clamp(1.15rem, 1.8vw, 1.5rem); line-height: 1.5; color: #BFB9AC; max-width: 52ch; margin: 0 auto 46px;">Theo dõi TikTok @gluconeogenesis để cải thiện bữa ăn và lối sống. Hoặc bắt đầu ngay: xin 1 suất coaching, hoặc đăng ký early access "Bộ não".</p>
+      <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 18px;">
+        <a href="https://www.tiktok.com/@_gluconeogenesis_" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; gap: 12px; background: #B4301E; color: #EDE7D8; font-family: 'Oswald', sans-serif; font-weight: 600; font-size: 1rem; letter-spacing: 0.12em; text-transform: uppercase; padding: 19px 40px; border: 1px solid #B4301E;" style-hover="background: #d13a25; border-color: #d13a25;">Theo dõi @gluconeogenesis</a>
+        <a href="{{ coachingUrl }}" style="display: inline-flex; align-items: center; gap: 10px; background: transparent; color: #EDE7D8; font-family: 'Oswald', sans-serif; font-weight: 600; font-size: 1rem; letter-spacing: 0.12em; text-transform: uppercase; padding: 19px 34px; border: 1px solid #55504a;" style-hover="border-color: #B4301E; color: #C08A3E;">Xin 1 suất coaching</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer style="position: relative; padding: 40px 44px; border-top: 1px solid #1c1a17; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px;">
+    <div style="font-family: 'Oswald', sans-serif; font-weight: 700; letter-spacing: 0.3em; text-transform: uppercase; font-size: 0.8rem; color: #EDE7D8;">Gluconeogenesis</div>
+    <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 24px; font-family: 'Barlow Condensed', sans-serif; font-weight: 400; font-size: 0.95rem; letter-spacing: 0.1em; text-transform: uppercase; color: #8C8A83;">
+      <a href="https://lukedang.com" target="_blank" rel="noopener" style="color: #8C8A83;" style-hover="color: #C08A3E;">lukedang.com</a>
+      <a href="https://www.tiktok.com/@gluconeogenesis" target="_blank" rel="noopener" style="color: #8C8A83;" style-hover="color: #C08A3E;">@gluconeogenesis</a>
+      <span>© 2026 Luke Dang</span>
+    </div>
+  </footer>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{
+  &quot;showSocialProof&quot;: { &quot;editor&quot;: &quot;boolean&quot;, &quot;default&quot;: true, &quot;tsType&quot;: &quot;boolean&quot;, &quot;section&quot;: &quot;Nội dung&quot; },
+  &quot;vaultUrl&quot;: { &quot;editor&quot;: &quot;text&quot;, &quot;default&quot;: &quot;&quot;, &quot;tsType&quot;: &quot;string&quot;, &quot;section&quot;: &quot;Link checkout&quot; },
+  &quot;coachingUrl&quot;: { &quot;editor&quot;: &quot;text&quot;, &quot;default&quot;: &quot;&quot;, &quot;tsType&quot;: &quot;string&quot;, &quot;section&quot;: &quot;Link checkout&quot; }
+}">
+class Component extends DCLogic {
+  componentDidMount() {
+    const v = document.querySelector('section[data-screen-label="HERO"] video');
+    if (!v) return;
+    v.loop = true; v.muted = true; v.setAttribute("playsinline", "");
+    const play = () => { const p = v.play(); if (p && p.catch) p.catch(() => {}); };
+    v.addEventListener("ended", () => { v.currentTime = 0; play(); });
+    v.addEventListener("pause", () => { if (!v.ended) play(); });
+    play();
+  }
+  renderVals() {
+    return {
+      showSocialProof: this.props.showSocialProof ?? true,
+      vaultUrl: (this.props.vaultUrl && this.props.vaultUrl.trim()) || "#dang-ky",
+      coachingUrl: (this.props.coachingUrl && this.props.coachingUrl.trim()) || "#coaching"
+    };
+  }
+}
+</script>
+</body>
+</html>

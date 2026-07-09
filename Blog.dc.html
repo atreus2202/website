@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<title>Nhật ký cơ chế — Bài viết | Gluconeogenesis</title>
+<meta name="description" content="Bài viết về mechanistic nutrition: Randle cycle, insulin, amino acid, adaptive thermogenesis. Đọc để hiểu cơ chế, không phải để tin dogma.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&amp;family=Barlow+Condensed:wght@300;400;500;600&amp;display=swap&amp;subset=vietnamese,latin,latin-ext" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { margin: 0; background: #0A0908; color: #EDE7D8; -webkit-font-smoothing: antialiased; }
+  a { color: #C08A3E; text-decoration: none; }
+  a:hover { color: #B4301E; }
+  ::selection { background: #B4301E; color: #EDE7D8; }
+</style>
+</helmet>
+<div style="position: relative; overflow-x: hidden; background: #0A0908; min-height: 100vh; display: flex; flex-direction: column;">
+
+  <!-- top bar -->
+  <div style="position: relative; z-index: 3; display: flex; align-items: center; justify-content: space-between; gap: 20px; padding: 26px 44px; border-bottom: 1px solid #1c1a17;">
+    <a href="Gluconeogenesis.dc.html" style="font-family: 'Oswald', sans-serif; font-weight: 700; letter-spacing: 0.32em; text-transform: uppercase; font-size: 0.92rem; color: #EDE7D8;" style-hover="color: #C08A3E;">Gluconeogenesis</a>
+    <div style="display: flex; align-items: center; gap: 22px;">
+      <a href="Gluconeogenesis.dc.html" style="font-family: 'Oswald', sans-serif; font-weight: 600; font-size: 0.78rem; letter-spacing: 0.18em; text-transform: uppercase; color: #EDE7D8;" style-hover="color: #C08A3E;">Trang chủ</a>
+      <a href="https://www.tiktok.com/@_gluconeogenesis_" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; gap: 10px; font-family: 'Oswald', sans-serif; font-weight: 600; font-size: 0.78rem; letter-spacing: 0.18em; text-transform: uppercase; color: #C08A3E; border: 1px solid #3a352f; padding: 10px 16px;">
+        <span style="width: 7px; height: 7px; background: #B4301E; display: inline-block;"></span>@gluconeogenesis · TikTok
+      </a>
+    </div>
+  </div>
+
+  <!-- ============ MASTHEAD ============ -->
+  <section data-screen-label="BLOG MASTHEAD" style="position: relative; padding: 96px 44px 4px;">
+    <div style="max-width: 1120px; margin: 0 auto;">
+      <div style="display: flex; align-items: baseline; gap: 18px; font-family: 'Oswald', sans-serif; font-weight: 600; letter-spacing: 0.28em; text-transform: uppercase; font-size: 0.85rem; margin-bottom: 34px;">
+        <span style="color: #B4301E;">Viết</span><span style="width: 44px; height: 1px; background: #3a352f; display: inline-block; transform: translateY(-4px);"></span><span style="color: #8C8A83;">Nhật ký cơ chế</span>
+      </div>
+      <div style="display: grid; grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr); gap: 44px; align-items: end;">
+        <h1 style="font-family: 'Oswald', sans-serif; font-weight: 700; text-transform: uppercase; font-size: clamp(2.6rem, 6.5vw, 6rem); line-height: 1.15; letter-spacing: -0.01em; margin: 0; color: #EDE7D8;">Đọc để hiểu, không phải để tin</h1>
+        <p style="font-family: 'Barlow Condensed', sans-serif; font-weight: 400; font-size: clamp(1.15rem, 1.6vw, 1.42rem); line-height: 1.55; color: #BFB9AC; margin: 0 0 10px;">Ghi chép về cơ chế sinh hóa thật đằng sau dinh dưỡng — Randle cycle, amino acid, hormone, chuyển hóa. Không dogma, không rác wellness-blog.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ BLOG BODY ============ -->
+  <section data-screen-label="BLOG" style="position: relative; padding: 72px 44px 120px; flex: 1;">
+    <div style="max-width: 1120px; margin: 0 auto;">
+
+      <!-- Featured post -->
+      <a href="#" style="display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr); gap: 0; border: 1px solid #26231f; margin-bottom: 40px; background: #101010;" style-hover="border-color: #B4301E;">
+        <div style="position: relative; height: 100%; min-height: 420px; overflow: hidden;">
+          <div style="position: absolute; inset: 0;">
+            <x-import component-from-global-scope="image-slot" from="./image-slot.js" id="blog-featured" shape="rect" fit="cover" src="assets/lion.png" placeholder="Ảnh bài nổi bật" hint-size="100%,100%"></x-import>
+          </div>
+          <div style="position: absolute; top: 0; left: 0; z-index: 2; pointer-events: none; display: flex; align-items: center; gap: 10px; background: #B4301E; color: #EDE7D8; font-family: 'Oswald', sans-serif; font-weight: 600; font-size: 0.72rem; letter-spacing: 0.18em; text-transform: uppercase; padding: 10px 16px;">
+            <span style="width: 6px; height: 6px; background: #EDE7D8; display: inline-block;"></span>Bài nổi bật
+          </div>
+        </div>
+        <div style="display: flex; flex-direction: column; justify-content: center; padding: 52px 48px;">
+          <div style="display: flex; align-items: center; gap: 16px; font-family: 'Oswald', sans-serif; font-weight: 600; font-size: 0.74rem; letter-spacing: 0.2em; text-transform: uppercase; color: #C08A3E; margin-bottom: 26px;">
+            <span>Cơ chế</span><span style="width: 4px; height: 4px; background: #55504a; border-radius: 50%; display: inline-block;"></span><span style="color: #8C8A83;">08.07.2026</span>
+          </div>
+          <h2 style="font-family: 'Oswald', sans-serif; font-weight: 700; text-transform: uppercase; font-size: clamp(1.6rem, 2.6vw, 2.5rem); line-height: 1.12; letter-spacing: -0.005em; margin: 0 0 22px; color: #EDE7D8;">Randle cycle: tại sao trộn fat với carb là công tắc tăng cân âm thầm</h2>
+          <p style="font-family: 'Barlow Condensed', sans-serif; font-weight: 400; font-size: 1.22rem; line-height: 1.55; color: #BFB9AC; margin: 0 0 30px;">Cơ thể không đốt fat và glucose cùng lúc một cách hiệu quả. Khi cả hai cùng cao trong máu, insulin tăng, fat bị khóa trong mô mỡ còn glucose được ưu tiên đốt. Đây là cơ chế Randle — và nó giải thích vì sao "ăn gì cũng được miễn đủ calo" là lời khuyên tệ nhất.</p>
+          <div style="display: flex; align-items: center; justify-content: space-between; gap: 16px; margin-top: auto;">
+            <div style="display: flex; align-items: center; gap: 12px; font-family: 'Barlow Condensed', sans-serif; font-weight: 500; font-size: 1rem; letter-spacing: 0.06em; color: #8C8A83;">
+              <span style="width: 26px; height: 1px; background: #3a352f; display: inline-block;"></span>Luke Dang
+            </div>
+            <span style="font-family: 'Oswald', sans-serif; font-weight: 600; font-size: 0.85rem; letter-spacing: 0.14em; text-transform: uppercase; color: #C08A3E;">Đọc bài →</span>
+          </div>
+        </div>
+      </a>
+
+      <!-- List heading -->
+      <div style="display: flex; align-items: center; gap: 16px; margin: 64px 0 8px; font-family: 'Oswald', sans-serif; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; font-size: 0.78rem; color: #8C8A83;">
+        <span>Tất cả bài viết</span><span style="flex: 1; height: 1px; background: #1c1a17; display: inline-block;"></span>
+      </div>
+
+      <!-- List of posts -->
+      <sc-for list="{{ posts }}" as="post" hint-placeholder-count="5">
+        <a href="#" style="display: grid; grid-template-columns: 118px minmax(0, 1fr) auto; align-items: center; gap: 32px; padding: 34px 4px; border-top: 1px solid #1c1a17;" style-hover="background: #0f0e0d;">
+          <div style="display: flex; flex-direction: column; gap: 10px; font-family: 'Oswald', sans-serif;">
+            <span style="font-weight: 600; font-size: 0.72rem; letter-spacing: 0.18em; text-transform: uppercase; color: #C08A3E;">{{ post.category }}</span>
+            <span style="font-family: 'Barlow Condensed', sans-serif; font-weight: 400; font-size: 0.98rem; letter-spacing: 0.04em; color: #6f6b64;">{{ post.date }}</span>
+          </div>
+          <div>
+            <h3 style="font-family: 'Oswald', sans-serif; font-weight: 600; text-transform: uppercase; font-size: clamp(1.25rem, 2.1vw, 1.9rem); line-height: 1.18; letter-spacing: -0.005em; margin: 0 0 8px; color: #EDE7D8;">{{ post.title }}</h3>
+            <span style="font-family: 'Barlow Condensed', sans-serif; font-weight: 500; font-size: 0.98rem; letter-spacing: 0.06em; color: #8C8A83;">Luke Dang</span>
+          </div>
+          <span style="font-family: 'Oswald', sans-serif; font-weight: 700; font-size: 1.5rem; line-height: 1; color: #55504a; justify-self: end;">→</span>
+        </a>
+      </sc-for>
+      <div style="border-top: 1px solid #1c1a17;"></div>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer style="position: relative; padding: 40px 44px; border-top: 1px solid #1c1a17; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px;">
+    <a href="Gluconeogenesis.dc.html" style="font-family: 'Oswald', sans-serif; font-weight: 700; letter-spacing: 0.3em; text-transform: uppercase; font-size: 0.8rem; color: #EDE7D8;" style-hover="color: #C08A3E;">Gluconeogenesis</a>
+    <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 24px; font-family: 'Barlow Condensed', sans-serif; font-weight: 400; font-size: 0.95rem; letter-spacing: 0.1em; text-transform: uppercase; color: #8C8A83;">
+      <a href="https://lukedang.com" target="_blank" rel="noopener" style="color: #8C8A83;" style-hover="color: #C08A3E;">lukedang.com</a>
+      <a href="https://www.tiktok.com/@_gluconeogenesis_" target="_blank" rel="noopener" style="color: #8C8A83;" style-hover="color: #C08A3E;">@gluconeogenesis</a>
+      <span>© 2026 Luke Dang</span>
+    </div>
+  </footer>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  renderVals() {
+    return {
+      posts: [
+        { category: "Hormone", date: "02.07.2026", title: "Insulin không phải kẻ thù. Nó là tín hiệu — và mày đang đọc sai" },
+        { category: "Myth-busting", date: "24.06.2026", title: "\"Ăn nhiều ức gà\" và huyền thoại đếm gram protein" },
+        { category: "Chuyển hóa", date: "15.06.2026", title: "Adaptive thermogenesis: vì sao ăn kiêng calo cuối cùng luôn phản đòn" },
+        { category: "Animal-based", date: "03.06.2026", title: "Organ meat, bone broth và phần bị bỏ quên của việc ăn thịt" },
+        { category: "Đường", date: "21.05.2026", title: "Fructose vs glucose: gan mày không xử lý hai loại đường giống nhau" }
+      ]
+    };
+  }
+}
+</script>
+</body>
+</html>
